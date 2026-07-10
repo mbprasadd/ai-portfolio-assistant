@@ -305,8 +305,32 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json({ reply: response.text });
-  } catch (err) {
-    console.error("Chat API error:", err);
-    return NextResponse.json({ error: "Something went wrong" }, { status: 500 });
-  }
+    } catch (err: any) {
+        console.error("Chat API error:", err);
+
+        if (err?.status === 429) {
+          return NextResponse.json(
+            {
+              reply: "🚦 Bhanu.AI is temporarily busy due to API rate limits. Please try again in a few moments, or feel free to contact Bhanu directly via Email or LinkedIn."
+            },
+            { status: 429 }
+          );
+        }
+
+        console.error("Message:", err?.message);
+        console.error(err?.stack);
+
+        if (err?.message) {
+          console.error("Message:", err.message);
+        }
+
+        if (err?.stack) {
+          console.error(err.stack);
+        }
+
+        return NextResponse.json(
+          { error: err?.message || "⚠️ Something went wrong in Bhanu.AI while generating a response. Please try again shortly." },
+          { status: 500 }
+        );
+    }
 }
