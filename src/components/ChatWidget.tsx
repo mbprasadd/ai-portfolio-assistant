@@ -11,6 +11,7 @@ import SuggestedQuestions from "./SuggestedQuestions";
 import TypingIndicator from "./TypingIndicator";
 
 export default function ChatWidget() {
+  const [animateIn, setAnimateIn] = useState(false);
   const [open, setOpen] = useState(false);
   const [hideTeaser, setHideTeaser] = useState(false);
   const [showText, setShowText] = useState(true);
@@ -21,12 +22,20 @@ export default function ChatWidget() {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (dismissAnimation) return;
-    const interval = setInterval(() => {
-      setShowText((prev) => !prev);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [dismissAnimation]); 
+  const timer = setTimeout(() => {
+    setAnimateIn(true);
+  }, 100);
+
+  return () => clearTimeout(timer);
+}, []);
+
+  // useEffect(() => {
+  //   if (dismissAnimation) return;
+  //   const interval = setInterval(() => {
+  //     setShowText((prev) => !prev);
+  //   }, 3000);
+  //   return () => clearInterval(interval);
+  // }, [dismissAnimation]); 
 
   useEffect(() => {
   if (!open) {
@@ -45,23 +54,27 @@ export default function ChatWidget() {
     <>
       {/* Floating Button */}
       {!open && (
-        <div
-          className="fixed bottom-6 right-6 z-50 flex items-center cursor-pointer"
-          onClick={() => {
-            setOpen(true);
-            setDismissAnimation(true);
-          }}
-        >
           <div
-            className={`fixed bottom-1 right-17 overflow-hidden transition-all duration-500 ${
-              showText ? "w-[230] opacity-100 mr-2" : "w-0 opacity-0 mr-0"
+            className={`fixed bottom-6 right-6 z-50 flex items-center cursor-pointer transition-all duration-1000 ease-out ${
+              animateIn
+                ? "translate-y-0 opacity-100"
+                : "-translate-y-40 opacity-0"
+            }`}
+            onClick={() => {
+              setOpen(true);
+              setDismissAnimation(true);
+            }}
+          >
+          <div
+            className={`fixed bottom-[-20] right-13 overflow-hidden transition-all duration-500 ${
+              showText ? "w-[230] opacity-100" : "w-0 opacity-0 mr-0"
             }`}
           >
             <div className="rounded-2xl rounded-tr-none border border-zinc-800 bg-zinc-900 px-4 py-3 shadow-xl whitespace-nowrap">
               <p className="font-semibold text-white text-sm">
                 👋 Chat with 
                 <span className="text-xs px-2 rounded-full text-[#E4232F] border border-[#E4232F]/30 ml-3">
-                    Bhanu AI
+                    Bhanu.AI
                 </span>
               </p>
               <p className="text-xs text-gray-400"> Ask about my skills & experience </p>
@@ -76,7 +89,7 @@ export default function ChatWidget() {
 
       {/* Chat Window */}
       {open && (
-        <div className="fixed bottom-6 right-6 z-50 flex h-[500] w-[400] flex-col overflow-hidden rounded-3xl border border-zinc-800 bg-black shadow-2xl max-md:bottom-0 max-md:right-0 max-md:h-screen max-md:w-screen max-md:rounded-none" >
+        <div className="fixed bottom-1 md:bottom-6 right-6 z-50 flex h-[500] w-[400] flex-col overflow-hidden rounded-3xl border border-zinc-800 bg-black shadow-2xl max-md:right-0 max-md:h-[80vh] max-md:w-[90vw]" >
           <ChatHeader
             onClose={() => {
               setOpen(false);
