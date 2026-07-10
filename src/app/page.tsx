@@ -357,7 +357,7 @@ export default function Home() {
               <div className="mb-16">
                   <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Project<span className="text-[#E4232F]">'s</span></h2>
                   <div className="flex items-center gap-3">
-                      <span class="text-xs font-mono text-[#E4232F]">03</span>
+                      <span className="text-xs font-mono text-[#E4232F]">03</span>
                       <div className="h-px w-96 bg-gradient-to-r from-[#E4232F] to-transparent"></div>
                   </div>
 
@@ -778,35 +778,35 @@ export default function Home() {
                           <li className="flex gap-3 items-start">
                               <span className="text-[#E4232F] mt-1">✔</span>
                               <p className="text-sm text-gray-300 leading-relaxed">
-                                  <b class="text-white">Summer Internship on Web Development</b> — Anurag IT Solutions
+                                  <b className="text-white">Summer Internship on Web Development</b> — Anurag IT Solutions
                               </p>
                           </li>
 
                           <li className="flex gap-3 items-start">
                               <span className="text-[#E4232F] mt-1">✔</span>
                               <p className="text-sm text-gray-300 leading-relaxed">
-                                  <b class="text-white">Frontend Internship</b> at VersionX Innovations
+                                  <b className="text-white">Frontend Internship</b> at VersionX Innovations
                               </p>
                           </li>
 
                           <li className="flex gap-3 items-start">
                               <span className="text-[#E4232F] mt-1">✔</span>
                               <p className="text-sm text-gray-300 leading-relaxed">
-                                  <b class="text-white">Web Development Internship</b> at GOITDEV Technologies
+                                  <b className="text-white">Web Development Internship</b> at GOITDEV Technologies
                               </p>
                           </li>
 
                           <li className="flex gap-3 items-start">
                               <span className="text-[#E4232F] mt-1">✔</span>
                               <p className="text-sm text-gray-300 leading-relaxed">
-                                  Participated in <b class="text-white">#60DaysOfCode</b> challenge, CCBP 4.0
+                                  Participated in <b className="text-white">#60DaysOfCode</b> challenge, CCBP 4.0
                               </p>
                           </li>
 
                           <li className="flex gap-3 items-start">
                               <span className="text-[#E4232F] mt-1">✔</span>
                               <p className="text-sm text-gray-300 leading-relaxed">
-                                  Solved <b class="text-white">1,000+ coding problems</b> on CCBP
+                                  Solved <b className="text-white">1,000+ coding problems</b> on CCBP
                               </p>
                           </li>
                       </ul>
