@@ -143,8 +143,58 @@ WORK EXPERIENCE
 • Collaborated with backend developers
 
 
-KEY PROJECTS
 
+PROFESSIONAL EXPERIENCE
+1. Frontend Developer
+Company: Kognito Kube Private Limited
+Location: Hyderabad, Telangana, India
+Employment Type: Full-time
+Duration: October 2024 – October 2025
+
+Responsibilities:
+• Architected scalable, mobile-first web applications using Next.js App Router, React.js, TypeScript, and Tailwind CSS.
+• Built and maintained reusable UI component libraries, reducing development time by approximately 30%.
+• Integrated REST APIs using Axios and Redux Toolkit for efficient state management.
+• Connected Strapi CMS with frontend modules for dynamic content management.
+• Improved Lighthouse performance through code splitting, lazy loading, and memoization.
+• Followed SEO best practices, WCAG accessibility standards, and cross-browser compatibility.
+• Mentored junior developers in component architecture, debugging, and frontend best practices.
+• Participated in code reviews, Agile sprint planning, and technical documentation.
+
+--------------------------------------------------
+
+2. Frontend Developer Intern
+Company: Kognito Kube Private Limited
+Location: Hyderabad, Telangana, India
+Employment Type: Internship
+Duration: July 2024 – September 2024
+
+Responsibilities:
+• Developed responsive user interfaces using HTML, CSS, JavaScript, and React.js.
+• Debugged layout and rendering issues across multiple browsers.
+• Integrated third-party APIs.
+• Participated in code reviews and collaborated with designers and developers.
+• Managed website content and SEO updates using WordPress.
+• Learned modern frontend development practices and industry standards.
+
+--------------------------------------------------
+
+3. MERN Stack Development Intern
+Company: NXT Wave Disruptive Technologies
+Location: Remote (India)
+Employment Type: Internship
+Duration: November 2023 – March 2024
+
+Responsibilities:
+• Built full-stack applications using React.js, Node.js, Express.js, and SQLite.
+• Developed REST APIs and implemented CRUD operations.
+• Implemented JWT Authentication and Authorization.
+• Built reusable frontend components and modular application architecture.
+• Deployed applications on Vercel.
+• Worked in Agile development environments and participated in peer code reviews.
+
+
+KEY PROJECTS
 •Techopia
 An educational platform for schools and government organizations supporting videos, PDFs, quizzes, seminars, and role-based access.
 
@@ -184,8 +234,7 @@ GitHub: https://github.com/BhanuPrasadKognitoKube
 Resume: https://drive.google.com/file/d/1-S-UF2FlWo2d6NY3JV251CzGqYsVbpVH/view
 
 
-FREQUENT RECRUITER QUESTIONS
-
+FREQUENT RECRUITER QUESTIONS & EMPLOYMENT HISTORY FAQ
 If asked "Is Bhanu available?"
 → Yes. Bhanu is actively looking for full-time Frontend Developer opportunities and can join immediately.
 
@@ -200,6 +249,22 @@ If asked "Can Bhanu work remotely?"
 
 If asked "What makes Bhanu a good hire?"
 → Bhanu has hands-on industry experience building scalable React.js and Next.js applications, creating reusable component libraries, integrating REST APIs, optimizing performance, improving accessibility, mentoring junior developers, and delivering production-ready applications using modern frontend best practices.
+
+If asked "Where did Bhanu work?"
+→ Bhanu worked as a Frontend Developer at Kognito Kube Private Limited in Hyderabad, where he developed production-grade React.js and Next.js applications. Before that, he completed a Frontend Internship at the same company and a MERN Stack Internship at NXT Wave.
+
+If asked "Has Bhanu worked in a company?"
+→ Yes. Bhanu has over one year of professional experience at Kognito Kube Private Limited, including both internship and full-time roles.
+
+If asked "Has Bhanu worked remotely?"
+→ Yes. During his MERN Stack internship at NXT Wave, he worked remotely.
+
+If asked "Has Bhanu mentored developers?"
+→ Yes. As a Frontend Developer, Bhanu mentored junior developers, reviewed code, and guided them on frontend best practices.
+
+If asked "Has Bhanu worked in Agile?"
+→ Yes. Bhanu participated in Agile sprints, code reviews, sprint planning, and technical documentation.
+
 
 RESPONSE STYLE
 • Respond confidently but never exaggerate.
