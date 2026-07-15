@@ -9,16 +9,16 @@ export const Footer = () => {
   return (
     <section>
       {/* ==== FOOTER / CONTACT === */}
-      <footer id="contact" className="relative overflow-hidden text-white bg-black pt-24 pb-10">
+      <footer id="contact" className="relative overflow-hidden text-white bg-black pt-16 md:pt-20 pb-10">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(700px_340px_at_15%_0%,rgba(228,35,47,0.22),transparent_60%)]"></div>
         <div className="relative z-10 max-w-[1120px] mx-auto px-7">
           <div className="font-['JetBrains_Mono'] text-[13px] text-[#E4232F] uppercase tracking-wider mb-1">Get in touch</div>
-          <div className="h-px w-56 bg-gradient-to-r from-[#E4232F] to-transparent mb-4"></div>
+          <div className="h-px w-38 bg-gradient-to-r from-[#E4232F] to-transparent mb-4"></div>
           <h2 className="font-['Space_Grotesk'] font-bold text-3xl md:text-5xl mb-5 max-w-[16ch] leading-tight">Let's build something reliable together.</h2>
-          <p className="text-white/60 text-[15.5px] max-w-[56ch] leading-relaxed mb-9">I'm actively looking for full-time Frontend / Full-stack roles. If you have an opening — or just want to talk shop — my inbox is open.</p>
+          <p className="text-justify text-white/60 text-[15.5px] max-w-[56ch] leading-relaxed mb-9">I'm actively looking for full-time Frontend / Full-stack roles. If you have an opening — or just want to talk shop — my inbox is open.</p>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-[18px] mb-14">
-            <a href="mailto:bhanuprasadm23@gmail.com" className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-[#E4232F]/40 transition flex flex-col justify-between min-h-[110px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-[18px] mb-14 items-start">
+            <a href="mailto:bhanuprasadm23@gmail.com" className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-[#E4232F]/40 transition flex flex-col gap-2 min-h-[60px]">
               <div>
                 <div className="text-[11px] font-['JetBrains_Mono'] uppercase tracking-wider text-white/45 mb-2">Email</div>
                 <div className="text-sm font-medium break-words">bhanuprasadm23@gmail.com</div>
@@ -26,7 +26,7 @@ export const Footer = () => {
               <div className="h-px w-16 bg-gradient-to-r from-[#E4232F] to-transparent"></div>
             </a>
             
-            <a href="tel:+919030981779" className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-[#E4232F]/40 transition flex flex-col justify-between min-h-[110px]">
+            <a href="tel:+919030981779" className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-[#E4232F]/40 transition flex flex-col gap-2 min-h-[70px]">
               <div>
                 <div className="text-[11px] font-['JetBrains_Mono'] uppercase tracking-wider text-white/45 mb-2">Phone</div>
                 <div className="text-sm font-medium">+91 90309 81779</div>
@@ -34,7 +34,7 @@ export const Footer = () => {
               <div className="h-px w-16 bg-gradient-to-r from-[#E4232F] to-transparent"></div>
             </a>
             
-            <a href="https://linkedin.com/in/bhanuprasadmanthri707049256" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-[#E4232F]/40 transition flex flex-col justify-between min-h-[110px]">
+            <a href="https://linkedin.com/in/bhanuprasadmanthri707049256" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-[#E4232F]/40 transition flex flex-col gap-2 min-h-[70px]">
               <div>
                 <div className="text-[11px] font-['JetBrains_Mono'] uppercase tracking-wider text-white/45 mb-2">LinkedIn</div>
                 <div className="text-sm font-medium">/bhanuprasadmanthri</div>
@@ -42,7 +42,7 @@ export const Footer = () => {
               <div className="h-px w-16 bg-gradient-to-r from-[#E4232F] to-transparent"></div>
             </a>
             
-            <a href="https://github.com/BhanuPrasadKognitoKube" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-[#E4232F]/40 transition flex flex-col justify-between min-h-[110px]">
+            <a href="https://github.com/BhanuPrasadKognitoKube" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-[#E4232F]/40 transition flex flex-col gap-2 min-h-[70px]">
               <div>
                 <div className="text-[11px] font-['JetBrains_Mono'] uppercase tracking-wider text-white/45 mb-2">GitHub</div>
                 <div className="text-sm font-medium">/BhanuPrasadKognitoKube</div>

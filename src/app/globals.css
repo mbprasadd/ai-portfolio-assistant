@@ -19,6 +19,10 @@
   }
 }
 
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
