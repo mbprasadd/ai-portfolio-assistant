@@ -1,18 +1,20 @@
 "use client";
-import Link from "next/link";
-import Image from "next/image";
+
+import useVisitor from "@/hooks/useVisitor";
 
 import { Navbar } from "@/components/Portfolio/Navbar";
-import { Footer } from "@/components/Portfolio/Footer";
-import ChatWidget from "@/components/ChatWidget";
-import { Bot } from "lucide-react";
+import { Banner } from "@/components/Portfolio/Banner";
+import { Experience } from "@/components/Portfolio/Experience";
+import { Projects } from "@/components/Portfolio/Projects";
 import { Skills } from "@/components/Portfolio/Skills";
 import { Education } from "@/components/Portfolio/Education";
-import { Projects } from "@/components/Portfolio/Projects";
-import { Experience } from "@/components/Portfolio/Experience";
-import { Banner } from "@/components/Portfolio/Banner";
+import { Footer } from "@/components/Portfolio/Footer";
+import ChatWidget from "@/components/ChatWidget";
 
+  
 export default function Home() {
+    useVisitor();
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-black via-zinc-950 to-black text-white">
 

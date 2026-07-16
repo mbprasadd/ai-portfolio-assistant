@@ -303,9 +303,9 @@ export async function POST(req: NextRequest) {
         { role: "user", parts: [{ text: message }] },
       ],
     });
-
     return NextResponse.json({ reply: response.text });
-    } catch (err: any) {
+
+  } catch (err: any) {
         console.error("Chat API error:", err);
 
         if (err?.status === 429) {
