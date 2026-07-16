@@ -2,14 +2,11 @@
 
 import useVisitor from "@/hooks/useVisitor";
 
-import { Navbar } from "@/components/Portfolio/Navbar";
-import { Banner } from "@/components/Portfolio/Banner";
-import { Experience } from "@/components/Portfolio/Experience";
-import { Projects } from "@/components/Portfolio/Projects";
-import { Skills } from "@/components/Portfolio/Skills";
-import { Education } from "@/components/Portfolio/Education";
-import { Footer } from "@/components/Portfolio/Footer";
-import ChatWidget from "@/components/ChatWidget";
+import { Banner } from "@/components/portfolio/Banner";
+import { Experience } from "@/components/portfolio/Experience";
+import { Projects } from "@/components/portfolio/Projects";
+import { Skills } from "@/components/portfolio/Skills";
+import { Education } from "@/components/portfolio/Education";
 
   
 export default function Home() {
@@ -17,9 +14,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-black via-zinc-950 to-black text-white">
-
-      {/* NAVBAR */}
-      <Navbar/>
 
       {/* BANNER */}
       <Banner />
@@ -320,11 +314,7 @@ export default function Home() {
       {/* EDUCATION */}
       <Education />
 
-      {/* FOOTER & FLOATING WHATSAPP + EMAIL */}
-      <Footer/>
-
-      {/* Floating Chat Widget */}
-      <ChatWidget />
+ 
     </main>
   );
 }
