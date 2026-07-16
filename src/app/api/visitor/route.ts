@@ -14,8 +14,15 @@ export async function POST(req: Request) {
     let geo: any = {};
     if (ip !== "::1" && ip !== "127.0.0.1") {
       try {
-        const res = await fetch(`https://ipapi.co/${ip}/json/`);
+        const res = await fetch(`https://ipwho.is/${ip}`);
         geo = await res.json();
+
+        console.log("IP:", ip);
+        console.log("Geo:", geo);
+        if (!geo.success) {
+          geo = {};
+        }
+
       } catch {
         geo = {};
       }
