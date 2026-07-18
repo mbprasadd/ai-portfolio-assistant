@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import ContactDock from './ContactDock';
+import LeaveAMessage from './LeaveAMessage';
 
 export const Footer = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -12,11 +13,28 @@ export const Footer = () => {
       <footer id="contact" className="relative overflow-hidden text-white bg-black pt-16 md:pt-20 pb-10">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(700px_340px_at_15%_0%,rgba(228,35,47,0.22),transparent_60%)]"></div>
         <div className="relative z-10 max-w-[1120px] mx-auto px-7">
-          <div className="font-['JetBrains_Mono'] text-[13px] text-[#E4232F] uppercase tracking-wider mb-1">Get in touch</div>
-          <div className="h-px w-38 bg-gradient-to-r from-[#E4232F] to-transparent mb-4"></div>
-          <h2 className="font-['Space_Grotesk'] font-bold text-3xl md:text-5xl mb-5 max-w-[16ch] leading-tight">Let's build something reliable together.</h2>
-          <p className="text-justify text-white/60 text-[15.5px] max-w-[56ch] leading-relaxed mb-9">I'm actively looking for full-time Frontend / Full-stack roles. If you have an opening — or just want to talk shop — my inbox is open.</p>
+          <div className="flex flex-col items-start justify-between gap-12 lg:flex-row lg:items-start mb-14">
+            {/* Left Side */}
+            <div className="lg:w-1/2">
+              <div className="font-['JetBrains_Mono'] text-[13px] text-[#E4232F] uppercase tracking-wider mb-1">Get in touch</div>
+              <div className="h-px w-38 bg-gradient-to-r from-[#E4232F] to-transparent mb-4"></div>
+              <h2 className="font-['Space_Grotesk'] mb-5 max-w-[16ch] text-3xl font-bold leading-tight md:text-5xl">
+                Let's build something reliable together.
+              </h2>
+
+              <p className="max-w-[56ch] text-[15.5px] leading-relaxed text-white/60">
+                I'm actively looking for full-time Frontend / Full-stack roles. If you
+                have an opening — or just want to talk shop — my inbox is open.
+              </p>
+            </div>
+
+            {/* Right Side Form - desktop only beside text */}
+            <div className="order-2 hidden flex-1 lg:block">
+              <LeaveAMessage />
+            </div>
+          </div>
           
+          {/* Contact Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-[18px] mb-14 items-start">
             <a href="mailto:bhanuprasadm23@gmail.com" className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-[#E4232F]/40 transition flex flex-col gap-2 min-h-[60px]">
               <div>
@@ -49,6 +67,11 @@ export const Footer = () => {
               </div>
               <div className="h-px w-16 bg-gradient-to-r from-[#E4232F] to-transparent"></div>
             </a>
+          </div>
+
+          {/* Form - mobile only below contact cards */}
+          <div className="mb-14 lg:hidden">
+            <LeaveAMessage />
           </div>
           
           <div className="border-t border-white/10 pt-6 flex justify-between flex-wrap gap-3 text-[12.5px] text-white/45 font-['JetBrains_Mono']">

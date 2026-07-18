@@ -13,12 +13,14 @@ import { useEffect, useState } from "react";
 import CountryChart from "@/components/analytics/CountryChart";
 import BrowserChart from "@/components/analytics/BrowserChart";
 import RecentVisitors from "@/components/analytics/RecentVisitors";
+import MessagesTable from "@/components/analytics/MessagesTable";
 
 export default function AnalyticsPage() {
   const [stats, setStats] = useState<any>(null);
   const [countryData, setCountries] = useState<any>(null);
   const [browswerData, setBrowsers] = useState<any>(null);
   const [recentVisitorsData, setRecentVisitors] = useState<any>(null);
+  const [contactMessagesData, setContactMessagesData] = useState<any>(null);
 
   useEffect(() => {
     async function getAnalytics() {
@@ -37,8 +39,13 @@ export default function AnalyticsPage() {
 
         const res = await fetch("/api/analytics");
         const data = await res.json();
-
         setStats(data.stats);
+
+        const messagesRes = await fetch("/api/contact");
+        const messages = await messagesRes.json();
+        setContactMessagesData(messages);
+
+
       } catch (err) {
         console.error(err);
       }
@@ -108,31 +115,22 @@ return (
           value={stats?.mobileVisitors}
           icon={Smartphone}
         />
-
       </div>
 
       {/* Charts */}
-
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-10">
-
-        <CountryChart
-          data={countryData?.data}
-        />
-
-        <BrowserChart
-          data={browswerData?.data}
-        />
-
+        <CountryChart data={countryData?.data} />
+        <BrowserChart data={browswerData?.data} />
       </div>
 
       {/* Recent Visitors */}
-
       <div className="mt-10">
+        <RecentVisitors data={recentVisitorsData?.data} />
+      </div>
 
-        <RecentVisitors
-          data={recentVisitorsData?.data}
-        />
-
+      {/* Contact Mesaages */}
+      <div className="mt-10">
+        <MessagesTable messages={contactMessagesData?.data} />
       </div>
 
     </div>
